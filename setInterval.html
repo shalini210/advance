@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1()
+        {
+            let pmins = document.getElementById("pmins")
+            let pseconds = document.getElementById("psecs")
+            let seconds = 0
+            let min = 0
+            let interval1 =   setInterval(() => {
+                seconds++
+                if(seconds==60)              
+                {
+                    seconds=0;
+                    min++;
+                }
+                pseconds.innerHTML=seconds
+                pmins.innerHTML=min
+               
+            }, 1000);
+        }
+    </script>
+</head>
+<body>
+    <div style="display: flex">
+    <p id="pmins">00</p><p>:</p>
+    <p id="psecs">00</p>
+</div>
+    <input type="button" value="click here" onclick="fun1()">
+    
+</body>
+</html>
